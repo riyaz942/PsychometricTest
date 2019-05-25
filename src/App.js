@@ -1,12 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Modal, Button } from 'react-materialize';
+import styles from './AppValue.module.scss';
 
 function App() {
-  return (
-    <div className="App">
+const trigger = <Button>Open Modal</Button>;
+
+return (
+    <div className={styles.app}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className={styles.app_logo} alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,6 +22,9 @@ function App() {
         >
           Learn React
         </a>
+        <Modal header="Modal Header" trigger={trigger}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Modal>
       </header>
     </div>
   );
