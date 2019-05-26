@@ -1,8 +1,32 @@
 import React, { Component } from 'react';
-import {RadioGroup} from 'react-materialize';
+import { RadioGroup, Checkbox} from 'react-materialize';
 import styles from './part.module.scss';
 
 export default class Part extends Component {
+
+  constructor(props) {
+    super(props)
+    this.checkBoxFirstOptionRef = React.createRef()
+    this.checkBoxSecondOptionRef = React.createRef()
+    
+    this.state = {
+      checkBoxFirstOption: false,
+      checkBoxSecondOption: false,
+    }
+  }
+
+  onChangeFirstOption = event => {
+    this.setState({
+      checkBoxFirstOption: !this.state.checkBoxFirstOption
+    });
+    this.checkBoxSecondOptionRef.current._input.checked = false
+  }
+
+  onChangeSecondOption = event => {
+    this.setState({
+      checkBoxSecondOption: !this.state.checkBoxSecondOption
+    });
+  }
 
   render() {
     const {
@@ -12,6 +36,12 @@ export default class Part extends Component {
       buttonGroupName,
       buttonValueName
     } = this.props;
+
+    const {
+      checkBoxFirstOption,
+      checkBoxSecondOption,
+    } = this.state;
+
     return(
      <div className={styles.part_container}>
       <div className={styles.title_container}>
@@ -20,11 +50,24 @@ export default class Part extends Component {
       </div>
 
       <div className={styles.radio_container}>
-        <RadioGroup
+        <Checkbox
+          ref={this.checkBoxFirstOptionRef}
+          value="Blue"
+          checked={checkBoxFirstOption}
+          onChange={this.onChangeFirstOption}
+        />
+        <Checkbox
+          ref={this.checkBoxSecondOptionRef}
+          value="Red"
+          checked={checkBoxSecondOption}
+          onChange={this.onChangeSecondOption}
+        />
+        
+        {/* <RadioGroup
           name={buttonGroupName}
           onChange={onChange}
           options={buttonValueName}
-        />
+        /> */}
       </div>
      </div>
     )
