@@ -1,0 +1,26 @@
+.part_container {
+  display: flex;
+
+  .title_container {
+    flex:1;
+    padding: 10px 16px;
+
+    .title_number {
+      font-size: 20px;
+      text-align: left;
+    }
+    .title_text {
+      font-size: 18px;
+    }
+  }
+
+  .radio_container {
+    max-width: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-left: solid 1px white;
+  }
+}
