@@ -16,16 +16,35 @@ export default class Part extends Component {
   }
 
   onChangeFirstOption = event => {
+    const {
+      checkBoxFirstOption,
+      checkBoxSecondOption,
+    } = this.state;
+
     this.setState({
-      checkBoxFirstOption: !this.state.checkBoxFirstOption
+      checkBoxFirstOption: !checkBoxFirstOption
     });
-    this.checkBoxSecondOptionRef.current._input.checked = false
+
+    if ( checkBoxSecondOption && !checkBoxFirstOption) {
+      this.setState({checkBoxSecondOption: false})
+      this.checkBoxSecondOptionRef.current._input.checked = false
+    }
   }
 
   onChangeSecondOption = event => {
+    const {
+      checkBoxFirstOption,
+      checkBoxSecondOption,
+    } = this.state;
+
     this.setState({
-      checkBoxSecondOption: !this.state.checkBoxSecondOption
+      checkBoxSecondOption: !checkBoxSecondOption
     });
+
+    if ( checkBoxFirstOption && !checkBoxSecondOption ) {
+      this.setState({checkBoxFirstOption: false})
+      this.checkBoxFirstOptionRef.current._input.checked = false
+    }
   }
 
   render() {
