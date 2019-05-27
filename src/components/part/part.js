@@ -49,11 +49,11 @@ export default class Part extends Component {
 
   render() {
     const {
-      titleNumber,
+      showSectionId,
+      sectionId,
       titleValue,
-      onChange,
-      buttonGroupName,
-      buttonValueName
+      firstCheckBoxValue,
+      secondCheckBoxValue
     } = this.props;
 
     const {
@@ -64,35 +64,25 @@ export default class Part extends Component {
     return(
      <div className={styles.part_container}>
       <div className={styles.title_container}>
-        {titleNumber && (<div className={styles.title_number}><b>{titleNumber}</b></div>)}
+        {showSectionId && (<div className={styles.title_number}><b>{sectionId}</b></div>)}
         <div className={styles.title_text}>{titleValue}</div>
       </div>
 
       <div className={styles.radio_container}>
         <Checkbox
           ref={this.checkBoxFirstOptionRef}
-          value="Blue"
+          value={firstCheckBoxValue}
           checked={checkBoxFirstOption}
           onChange={this.onChangeFirstOption}
         />
         <Checkbox
           ref={this.checkBoxSecondOptionRef}
-          value="Red"
+          value={secondCheckBoxValue}
           checked={checkBoxSecondOption}
           onChange={this.onChangeSecondOption}
         />
-        
-        {/* <RadioGroup
-          name={buttonGroupName}
-          onChange={onChange}
-          options={buttonValueName}
-        /> */}
       </div>
      </div>
     )
   }
-}
-
-Part.defaultProps = {
-  buttonValueName: [{label: '',value: 'xl'},{label: '',value: 'l'}],
 }

@@ -16,9 +16,11 @@ export default class Section extends Component {
       {
         map(sectionData, (data, index) => (
           <Part
-            buttonGroupName="aNameisRequried"
-            titleNumber={index === 0 ? sectionId : null}
+            showSectionId={index===0}
+            sectionId={sectionId}
             titleValue={data.question}
+            firstCheckBoxValue={data.most}
+            secondCheckBoxValue={data.least}
           />
         ))
       }
