@@ -6,11 +6,10 @@ export default class Table extends Component {
   render() {
     return (
       <div className={styles.table_container}>
+        <Section />     
+        <Section />     
         <Section />
         <Section />
-        <Section />
-        <Section />
-        <Section />        
       </div>
     );
   }
