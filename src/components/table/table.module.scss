@@ -1,5 +1,7 @@
 .table_container {
   display: flex;
-  max-width: 900px;
+  padding: 100px 100px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }

@@ -18,8 +18,12 @@ class Part extends Component {
     }
   }
 
+  /* ------------------------------------LifeCycle methods------------------------------------ */
+
+  // this function validates on already ticked parts
+  // when a new data is entered it checks for the id .. if it doesn't matches then this unticks the component
+  // so as to keep only 1 check on a section
   componentWillReceiveProps(nextProps) {
-    //TODO check if the most selected part id is deferent and check current state then unselect if checked
     const {
       answersReducer : {answers},
       partId,
@@ -53,6 +57,8 @@ class Part extends Component {
 
   }
 
+  /* ------------------------------------Helper function------------------------------------ */
+
   checkIfDataExists = (sectionId, partId, type) => {
     const {
       answersReducer,
@@ -65,6 +71,7 @@ class Part extends Component {
     )
   }
 
+  /* ------------------------------------Onchange functions------------------------------------ */
   onChangeFirstOption = event => {
     const {
       checkBoxFirstOption,
@@ -86,7 +93,7 @@ class Part extends Component {
         value
       })
     }
-
+// TODO remove from data when unchecked
     this.setState({
       checkBoxFirstOption: !checkBoxFirstOption
     });
@@ -111,8 +118,6 @@ class Part extends Component {
       checked,
       value
     } = event.target;
-    //TODO store data in reducers also add validation on each part that a section can't
-    // Select more then two answer at a time
 
     if (checked) {
       addLeast(sectionId, {
@@ -130,6 +135,8 @@ class Part extends Component {
       this.checkBoxFirstOptionRef.current._input.checked = false
     }
   }
+
+  /* ------------------------------------Render function------------------------------------ */
 
   render() {
     const {
