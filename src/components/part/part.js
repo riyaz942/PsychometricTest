@@ -4,7 +4,12 @@ import styles from './part.module.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addLeast, addMost } from '../../actions/answersActions';
+import { 
+  addLeast,
+  addMost,
+  removeMost,
+  removeLeast,
+} from '../../actions/answersActions';
 class Part extends Component {
 
   constructor(props) {
@@ -80,7 +85,8 @@ class Part extends Component {
     const {
       partId,
       sectionId,
-      addMost
+      addMost,
+      removeMost,
     } = this.props;
     const {
       checked,
@@ -92,8 +98,10 @@ class Part extends Component {
         id: partId,
         value
       })
+    } else {
+      removeMost(sectionId)
     }
-// TODO remove from data when unchecked
+
     this.setState({
       checkBoxFirstOption: !checkBoxFirstOption
     });
@@ -112,7 +120,8 @@ class Part extends Component {
     const {
       partId,
       sectionId,
-      addLeast
+      addLeast,
+      removeLeast,
     } = this.props;
     const {
       checked,
@@ -124,6 +133,8 @@ class Part extends Component {
         id: partId,
         value
       })
+    } else {
+      removeLeast(sectionId)
     }
 
     this.setState({
@@ -203,6 +214,8 @@ function mapDispatchToProps(dispatch) {
     ...bindActionCreators({
       addMost,
       addLeast,
+      removeMost,
+      removeLeast,
     },
     dispatch),
   };
