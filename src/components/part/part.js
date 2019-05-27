@@ -20,6 +20,37 @@ class Part extends Component {
 
   componentWillReceiveProps(nextProps) {
     //TODO check if the most selected part id is deferent and check current state then unselect if checked
+    const {
+      answersReducer : {answers},
+      partId,
+      sectionId,
+    } = nextProps;
+
+    const {
+      checkBoxFirstOption,
+      checkBoxSecondOption,
+    } = this.state;
+
+    if (
+      checkBoxFirstOption 
+      && answers[sectionId]
+      && answers[sectionId].most
+      && answers[sectionId].most.id !== partId
+    ) {
+      this.setState({checkBoxFirstOption: false});
+      this.checkBoxFirstOptionRef.current._input.checked = false;
+    }
+
+    if (
+      checkBoxSecondOption 
+      && answers[sectionId]
+      && answers[sectionId].least
+      && answers[sectionId].least.id !== partId
+    ) {
+      this.setState({checkBoxSecondOption: false});
+      this.checkBoxSecondOptionRef.current._input.checked = false;
+    }
+
   }
 
   checkIfDataExists = (sectionId, partId, type) => {
