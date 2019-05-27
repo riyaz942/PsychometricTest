@@ -18,6 +18,10 @@ class Part extends Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    //TODO check if the most selected part id is deferent and check current state then unselect if checked
+  }
+
   checkIfDataExists = (sectionId, partId, type) => {
     const {
       answersReducer,
@@ -44,8 +48,6 @@ class Part extends Component {
       checked,
       value
     } = event.target;
-    //TODO store data in reducers also add validation on each part that a section can't
-    // Select more then two answer at a time
 
     if (checked) {
       addMost(sectionId, {
@@ -71,10 +73,22 @@ class Part extends Component {
     } = this.state;
     const {
       partId,
-      sectionId
+      sectionId,
+      addLeast
     } = this.props;
+    const {
+      checked,
+      value
+    } = event.target;
     //TODO store data in reducers also add validation on each part that a section can't
     // Select more then two answer at a time
+
+    if (checked) {
+      addLeast(sectionId, {
+        id: partId,
+        value
+      })
+    }
 
     this.setState({
       checkBoxSecondOption: !checkBoxSecondOption

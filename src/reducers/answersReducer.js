@@ -9,6 +9,9 @@ const answersReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case answersConstants.ADD_MOST:
+    // TODO check if the correspoding least data's Id is the same as the payload.data.id
+    // If so then then remove the least key
+    // and wise versa
       return {
         ...state,
         answers: {
