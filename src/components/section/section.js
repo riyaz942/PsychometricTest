@@ -18,6 +18,7 @@ export default class Section extends Component {
           <Part
             showSectionId={index===0}
             sectionId={sectionId}
+            partId={data.id}
             titleValue={data.question}
             firstCheckBoxValue={data.most}
             secondCheckBoxValue={data.least}

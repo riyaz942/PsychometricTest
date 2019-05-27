@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { RadioGroup, Checkbox} from 'react-materialize';
+import { Checkbox} from 'react-materialize';
 import styles from './part.module.scss';
 
 export default class Part extends Component {
@@ -20,6 +20,12 @@ export default class Part extends Component {
       checkBoxFirstOption,
       checkBoxSecondOption,
     } = this.state;
+    const {
+      partId,
+      sectionId,
+    } = this.props;
+    //TODO store data in reducers also add validation on each part that a section can't
+    // Select more then two answer at a time
 
     this.setState({
       checkBoxFirstOption: !checkBoxFirstOption
@@ -36,6 +42,12 @@ export default class Part extends Component {
       checkBoxFirstOption,
       checkBoxSecondOption,
     } = this.state;
+    const {
+      partId,
+      sectionId
+    } = this.props;
+    //TODO store data in reducers also add validation on each part that a section can't
+    // Select more then two answer at a time
 
     this.setState({
       checkBoxSecondOption: !checkBoxSecondOption
