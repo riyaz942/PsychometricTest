@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware , compose} from 'redux';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import rootReducer from './reducers';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger'
 
-const store = createStore(rootReducer)
+const store = createStore(
+  rootReducer,
+  compose(
+    applyMiddleware(thunk),
+    applyMiddleware(logger),  
+  )
+)
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 

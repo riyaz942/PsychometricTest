@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Checkbox} from 'react-materialize';
 import styles from './part.module.scss';
-
-export default class Part extends Component {
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addLeast, addMost } from '../../actions/answersActions';
+class Part extends Component {
 
   constructor(props) {
     super(props)
@@ -15,6 +18,18 @@ export default class Part extends Component {
     }
   }
 
+  checkIfDataExists = (sectionId, partId, type) => {
+    const {
+      answersReducer,
+    } = this.props;
+
+    return (
+      answersReducer[sectionId] &&
+      answersReducer[sectionId][type] &&
+      answersReducer[sectionId][type].id === partId
+    )
+  }
+
   onChangeFirstOption = event => {
     const {
       checkBoxFirstOption,
@@ -23,17 +38,29 @@ export default class Part extends Component {
     const {
       partId,
       sectionId,
+      addMost
     } = this.props;
+    const {
+      checked,
+      value
+    } = event.target;
     //TODO store data in reducers also add validation on each part that a section can't
     // Select more then two answer at a time
+
+    if (checked) {
+      addMost(sectionId, {
+        id: partId,
+        value
+      })
+    }
 
     this.setState({
       checkBoxFirstOption: !checkBoxFirstOption
     });
 
     if ( checkBoxSecondOption && !checkBoxFirstOption) {
-      this.setState({checkBoxSecondOption: false})
-      this.checkBoxSecondOptionRef.current._input.checked = false
+      this.setState({checkBoxSecondOption: false});
+      this.checkBoxSecondOptionRef.current._input.checked = false;
     }
   }
 
@@ -98,3 +125,35 @@ export default class Part extends Component {
     )
   }
 }
+
+Part.propTypes = {
+  showSectionId: PropTypes.bool,
+
+  sectionId: PropTypes.string.isRequired,
+  partId: PropTypes.number.isRequired,
+
+  titleValue: PropTypes.string,
+
+  firstCheckBoxValue: PropTypes.string,
+  secondCheckBoxValue: PropTypes.string,
+};
+
+function mapStateToProps(state) {
+ 
+  return {
+    answersReducer: state.answersReducer
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+    ...bindActionCreators({
+      addMost,
+      addLeast,
+    },
+    dispatch),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Part);
