@@ -120,70 +120,70 @@ class Result extends Component {
     const zDifference = mostAnswers.z - leastAnswers.z;
     // const nDifference = mostAnswers.n - leastAnswers.n;
 
-    if (starDifference => 6 && starDifference <= 24) {
+    if(starDifference >= 6 && starDifference <= 24){
       star = 7
-    } else if (starDifference => 5 && starDifference <= 3) {
+    } else if (starDifference >= 3 && starDifference <= 5) {
       star = 6
-    } else if (starDifference => 0 && starDifference <= 2) {
+    } else if (starDifference >= 0 && starDifference <= 2) {
       star = 5      
-    } else if (starDifference => -2 && starDifference <= -1) {
+    } else if (starDifference >= -2 && starDifference <= -1) {
       star = 4
-    } else if (starDifference => -5 && starDifference <= -3) {
+    } else if (starDifference >= -5 && starDifference <= -3) {
       star = 3
-    } else if (starDifference => -8 && starDifference <= -6) {
+    } else if (starDifference >= -8 && starDifference <= -6) {
       star = 2
-    } else if (starDifference => -26 && starDifference <= -9) {
+    } else if (starDifference >= -26 && starDifference <= -9) {
       star = 1
     }
 
 
-    if (triangleDifference => 12 && triangleDifference <= 26) {
+    if(triangleDifference >= 12 && triangleDifference <= 26){
       triangle = 7
-    } else if (triangleDifference => 9 && triangleDifference <= 11) {
+    } else if (triangleDifference >= 9 && triangleDifference <= 11) {
       triangle = 6
-    } else if (triangleDifference => 6 && triangleDifference <= 8) {
+    } else if (triangleDifference >= 6 && triangleDifference <= 8) {
       triangle = 5
-    } else if (triangleDifference => 3 && triangleDifference <= 5) {
+    } else if (triangleDifference >= 3 && triangleDifference <= 5) {
       triangle = 4
-    } else if (triangleDifference => 0 && triangleDifference <= 2) {
+    } else if (triangleDifference >= 0 && triangleDifference <= 2) {
       triangle = 3
-    } else if (triangleDifference => -4 && triangleDifference <= -1) {
+    } else if (triangleDifference >= -4 && triangleDifference <= -1) {
       triangle = 2
-    } else if (triangleDifference => -27 && triangleDifference <= -5) {
+    } else if (triangleDifference >= -27 && triangleDifference <= -5) {
       triangle = 1
     }
 
 
-    if (squareDifference => 8 && squareDifference <= 28) {
+    if (squareDifference >= 8 && squareDifference <= 28) {
       square = 7
-    } else if (squareDifference => 6 && squareDifference <= 7) {
+    } else if (squareDifference >= 6 && squareDifference <= 7) {
       square = 6
-    } else if (squareDifference => 3 && squareDifference <= 5) {
+    } else if (squareDifference >= 3 && squareDifference <= 5) {
       square = 5
-    } else if (squareDifference => 1 && squareDifference <= 2) {
+    } else if (squareDifference >= 1 && squareDifference <= 2) {
       square = 4
-    } else if (squareDifference => -2 && squareDifference <= 0) {
+    } else if (squareDifference >= -2 && squareDifference <= 0) {
       square = 3
-    } else if (squareDifference => -5 && squareDifference <= -3) {
+    } else if (squareDifference >= -5 && squareDifference <= -3) {
       square = 2
-    } else if (squareDifference => -26 && squareDifference <= -6) {
+    } else if (squareDifference >= -26 && squareDifference <= -6) {
       square = 1
     }
 
 
-    if (zDifference => 6 && zDifference <= 27) {
+    if (zDifference >= 6 && zDifference <= 27) {
       z = 7
-    } else if (zDifference => 0 && zDifference <= 5) {
+    } else if (zDifference >= 0 && zDifference <= 5) {
       z = 6
-    } else if (zDifference => -4 && zDifference <= -1) {
+    } else if (zDifference >= -4 && zDifference <= -1) {
       z = 5
-    } else if (zDifference => -7 && zDifference <= -5) {
+    } else if (zDifference >= -7 && zDifference <= -5) {
       z = 4
-    } else if (zDifference => -11 && zDifference <= -8) {
+    } else if (zDifference >= -11 && zDifference <= -8) {
       z = 3
-    } else if (zDifference => -12 && zDifference <= -14) {
+    } else if (zDifference >= -12 && zDifference <= -14) {
       z = 2
-    } else if (zDifference => -27 && zDifference <= -15) {
+    } else if (zDifference >= -27 && zDifference <= -15) {
       z = 1
     }
 
