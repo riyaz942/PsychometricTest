@@ -1,5 +1,6 @@
 {
   "name": "something",
+  "homepage": "http://riyaz942.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -72,7 +73,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -140,6 +143,7 @@
     ]
   },
   "devDependencies": {
-    "babel-plugin-transform-react-jsx-source": "^6.22.0"
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "gh-pages": "^2.0.1"
   }
 }
