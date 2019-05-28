@@ -11,30 +11,41 @@ import every from 'lodash/every';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import isEmpty from 'lodash/isEmpty';
+import Result from './components/result/Result';
 
 class App extends Component {
   state = {
     openSnackBar: false,
+    showResult: false,
   }
 
   handleClick = () => {
     const {
       answersReducer
     } = this.props;
-    console.log('something will :', answersReducer);
+    let hasError = false
+
     const questionsKeys = Object.keys(questions)
 
     every(questionsKeys, key => {
       if (isEmpty(answersReducer.answers[key])) {
+        hasError= true;
         return this.showError()
       } else if(isEmpty(answersReducer.answers[key].most)) {
+        hasError= true;
         return this.showError()
       } else if(isEmpty(answersReducer.answers[key].least)) {
+        hasError= true;
         return this.showError()
       }
-
       return true;
-    })
+    });
+
+    if(!hasError) {
+      this.setState({
+        showResult: true
+      });
+    }
   }
 
   showError = () => {
@@ -51,7 +62,7 @@ class App extends Component {
   }
 
   render() {
-    const {openSnackBar} = this.state;
+    const { openSnackBar, showResult } = this.state;
     const { className } = this.props;
     const classes = makeStyles(theme => ({
       error: {
@@ -69,14 +80,16 @@ class App extends Component {
     return (
       <div className={styles.app}>
         <div className={styles.app_container}>
-          <Table />
-          <Button 
+          {
+            showResult ? <Result /> : <Table />
+          }
+          <Button
             style={{
               marginBottom: 100
             }}
             onClick={this.handleClick}
             variant="contained"
-            color="secondary" 
+            color="secondary"
           >
             Submit
           </Button>
@@ -102,17 +115,14 @@ class App extends Component {
           />
         </div>
       </div>
-    );  
+    );
   }
 }
 
-
-function mapStateToProps(state) {
- 
+function mapStateToProps(state) { 
   return {
     answersReducer: state.answersReducer
   };
 }
-
 
 export default connect(mapStateToProps, null)(App);
