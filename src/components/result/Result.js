@@ -110,12 +110,33 @@ class Result extends Component {
   }
 
   render() {
-    const result = this.getResult();
-    console.log('result :', result);
-
+    const {mostAnswers, leastAnswers} = this.getResult();
+    const resultContainerStyle = {
+      margin: 20,
+    }
     return (
-     <div>
+     <div style={{
+       display: 'flex',
+     }}>
+      <div style={resultContainerStyle}>
+        MOST Count <br/>
+        ---------------<br/>
+        {`star : ${mostAnswers.star}`}<br/>
+        {`triangle : ${mostAnswers.triangle}`}<br/>
+        {`square : ${mostAnswers.square}`}<br/>
+        {`z : ${mostAnswers.z}`}<br/>
+        {`n : ${mostAnswers.n}`}<br/><br/>
+      </div>
 
+      <div style={resultContainerStyle}>
+        LEAST Count <br/>
+        --------------- <br/>
+        {`star : ${leastAnswers.star}`}<br/>
+        {`triangle : ${leastAnswers.triangle}`}<br/>
+        {`square : ${leastAnswers.square}`}<br/>
+        {`z : ${leastAnswers.z}`}<br/>
+        {`n : ${leastAnswers.n}`}<br/>
+      </div>
      </div>
     );
   }

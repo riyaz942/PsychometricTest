@@ -83,16 +83,20 @@ class App extends Component {
           {
             showResult ? <Result /> : <Table />
           }
-          <Button
-            style={{
-              marginBottom: 100
-            }}
-            onClick={this.handleClick}
-            variant="contained"
-            color="secondary"
-          >
-            Submit
-          </Button>
+          {
+            !showResult && (
+              <Button
+                style={{
+                  marginBottom: 100
+                }}
+                onClick={this.handleClick}
+                variant="contained"
+                color="secondary"
+              >
+                Submit
+              </Button>
+            )
+          }          
           <Snackbar
             className={clsx(classes.error, className)}
             aria-describedby="client-snackbar"

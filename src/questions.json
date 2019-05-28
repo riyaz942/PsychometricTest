@@ -4,25 +4,25 @@
       "id": 1,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 2,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 3,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 4,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     }
   ],
   "2": [
@@ -30,25 +30,25 @@
       "id": 5,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 6,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 7,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 8,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     }
   ],
   "3": [
@@ -56,25 +56,25 @@
       "id": 5,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 6,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 7,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 8,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     }
   ],
   "4": [
@@ -82,25 +82,25 @@
       "id": 9,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 10,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 11,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 12,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     }
   ],
   "5": [
@@ -108,25 +108,25 @@
       "id": 13,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 14,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 15,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     },
     {
       "id": 16,
       "question": "some question",
       "most": "star",
-      "least": "rectangle"
+      "least": "triangle"
     }
   ]
 }
