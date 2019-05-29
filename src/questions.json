@@ -2,130 +2,728 @@
   "1": [
     {
       "id": 1,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
+      "question": "enthusiastic",
+      "most": "square",
+      "least": "square"
     },
     {
       "id": 2,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
+      "question": "daring",
+      "most": "z",
+      "least": "z"
     },
     {
       "id": 3,
-      "question": "some question",
+      "question": "diplomatic",
       "most": "star",
-      "least": "triangle"
+      "least": "star"
     },
     {
       "id": 4,
-      "question": "some question",
-      "most": "star",
+      "question": "satisfied",
+      "most": "triangle",
       "least": "triangle"
     }
   ],
   "2": [
     {
       "id": 5,
-      "question": "some question",
+      "question": "cautious",
       "most": "star",
-      "least": "triangle"
+      "least": "star"
     },
     {
       "id": 6,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
+      "question": "determined",
+      "most": "z",
+      "least": "z"
     },
     {
       "id": 7,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
+      "question": "convincing",
+      "most": "square",
+      "least": "square"
     },
     {
       "id": 8,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
+      "question": "good-natured",
+      "most": "triangle",
+      "least": "n"
     }
   ],
   "3": [
     {
-      "id": 5,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
+      "id": 9,
+      "question": "friendly",
+      "most": "square",
+      "least": "n"
     },
     {
-      "id": 6,
-      "question": "some question",
+      "id": 10,
+      "question": "accurate",
       "most": "star",
-      "least": "triangle"
+      "least": "star"
     },
     {
-      "id": 7,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
+      "id": 11,
+      "question": "outspoken",
+      "most": "z",
+      "least": "z"
     },
     {
-      "id": 8,
-      "question": "some question",
-      "most": "star",
+      "id": 12,
+      "question": "calm",
+      "most": "n",
       "least": "triangle"
     }
   ],
   "4": [
     {
-      "id": 9,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
-    },
-    {
-      "id": 10,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
-    },
-    {
-      "id": 11,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
-    },
-    {
-      "id": 12,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
-    }
-  ],
-  "5": [
-    {
       "id": 13,
-      "question": "some question",
-      "most": "star",
-      "least": "triangle"
+      "question": "talkative",
+      "most": "square",
+      "least": "square"
     },
     {
       "id": 14,
-      "question": "some question",
+      "question": "controlled",
       "most": "star",
-      "least": "triangle"
+      "least": "star"
     },
     {
       "id": 15,
-      "question": "some question",
-      "most": "star",
+      "question": "conventional",
+      "most": "triangle",
       "least": "triangle"
     },
     {
       "id": 16,
-      "question": "some question",
+      "question": "decisive",
+      "most": "z",
+      "least": "z"
+    }
+  ],
+  "5": [
+    {
+      "id": 17,
+      "question": "adventurous",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 18,
+      "question": "insightful",
       "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 19,
+      "question": "out-going",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 20,
+      "question": "moderate",
+      "most": "triangle",
+      "least": "triangle"
+    }
+  ],
+  "6": [
+    {
+      "id": 21,
+      "question": "gentle",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 22,
+      "question": "persuasive",
+      "most": "square",
+      "least": "n"
+    },
+    {
+      "id": 23,
+      "question": "humble",
+      "most": "n",
+      "least": "star"
+    },
+    {
+      "id": 24,
+      "question": "original",
+      "most": "n",
+      "least": "z"
+    }
+  ],
+  "7": [
+    {
+      "id": 25,
+      "question": "expressive",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 26,
+      "question": "conscientious",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 27,
+      "question": "dominant",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 28,
+      "question": "responsive",
+      "most": "n",
+      "least": "triangle"
+    }
+  ],
+  "8": [
+    {
+      "id": 29,
+      "question": "poised",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 30,
+      "question": "observant",
+      "most": "star",
+      "least": "n"
+    },
+    {
+      "id": 31,
+      "question": "modest",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 32,
+      "question": "impatient",
+      "most": "z",
+      "least": "z"
+    }
+  ],
+  "9": [
+    {
+      "id": 33,
+      "question": "tactful",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 34,
+      "question": "agreeable",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 35,
+      "question": "magnetic",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 36,
+      "question": "insistent",
+      "most": "z",
+      "least": "z"
+    }
+  ],
+  "10": [
+    {
+      "id": 37,
+      "question": "brave",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 38,
+      "question": "inspiring",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 39,
+      "question": "submissive",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 40,
+      "question": "timid",
+      "most": "n",
+      "least": "star"
+    }
+  ],
+  "11": [
+    {
+      "id": 41,
+      "question": "reserved",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 42,
+      "question": "obliging",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 43,
+      "question": "strong-willed",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 44,
+      "question": "cheerful",
+      "most": "square",
+      "least": "square"
+    }
+  ],
+  "12": [
+    {
+      "id": 45,
+      "question": "stimulating",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 46,
+      "question": "kind",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 47,
+      "question": "perceptive",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 48,
+      "question": "independent",
+      "most": "z",
+      "least": "z"
+    }
+  ],
+  "13": [
+    {
+      "id": 49,
+      "question": "competitive",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 50,
+      "question": "considerate",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 51,
+      "question": "joyful",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 52,
+      "question": "private",
+      "most": "star",
+      "least": "star"
+    }
+  ],
+  "14": [
+    {
+      "id": 53,
+      "question": "fussy",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 54,
+      "question": "obedient",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 55,
+      "question": "firm",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 56,
+      "question": "playful",
+      "most": "square",
+      "least": "square"
+    }
+  ],
+  "15": [
+    {
+      "id": 57,
+      "question": "attractive",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 58,
+      "question": "introspective",
+      "most": "star",
+      "least": "n"
+    },
+    {
+      "id": 59,
+      "question": "stubborn",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 60,
+      "question": "predictable",
+      "most": "triangle",
+      "least": "triangle"
+    }
+  ],
+  "16": [
+    {
+      "id": 61,
+      "question": "logical",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 62,
+      "question": "bold",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 63,
+      "question": "loyal",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 64,
+      "question": "charming",
+      "most": "square",
+      "least": "square"
+    }
+  ],
+  "17": [
+    {
+      "id": 65,
+      "question": "sociable",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 66,
+      "question": "patient",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 67,
+      "question": "self-reliant",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 68,
+      "question": "soft-spoken",
+      "most": "star",
+      "least": "star"
+    }
+  ],
+  "18": [
+    {
+      "id": 69,
+      "question": "willing",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 70,
+      "question": "eager",
+      "most": "z",
+      "least": "n"
+    },
+    {
+      "id": 71,
+      "question": "thorough",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 72,
+      "question": "high-spirited",
+      "most": "square",
+      "least": "square"
+    }
+  ],
+  "19": [
+    {
+      "id": 73,
+      "question": "aggressive",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 74,
+      "question": "extroverted",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 75,
+      "question": "emiable",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 76,
+      "question": "fearful",
+      "most": "n",
+      "least": "star"
+    }
+  ],
+  "20": [
+    {
+      "id": 77,
+      "question": "confident",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 78,
+      "question": "sympathetic",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 79,
+      "question": "impartial",
+      "most": "n",
+      "least": "star"
+    },
+    {
+      "id": 80,
+      "question": "assertive",
+      "most": "z",
+      "least": "z"
+    }
+  ],
+  "21": [
+    {
+      "id": 81,
+      "question": "well-disciplined",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 82,
+      "question": "generous",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 83,
+      "question": "animated",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 84,
+      "question": "persistent",
+      "most": "z",
+      "least": "z"
+    }
+  ],
+  "22": [
+    {
+      "id": 85,
+      "question": "impulsive",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 86,
+      "question": "introverted",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 87,
+      "question": "forceful",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 88,
+      "question": "easy-going",
+      "most": "triangle",
+      "least": "triangle"
+    }
+  ],
+  "23": [
+    {
+      "id": 89,
+      "question": "good mixture",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 90,
+      "question": "refined",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 91,
+      "question": "vigorous",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 92,
+      "question": "lenient",
+      "most": "triangle",
+      "least": "triangle"
+    }
+  ],
+  "24": [
+    {
+      "id": 93,
+      "question": "captivating",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 94,
+      "question": "contented",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 95,
+      "question": "demanding",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 96,
+      "question": "compliant",
+      "most": "star",
+      "least": "star"
+    }
+  ],
+  "25": [
+    {
+      "id": 97,
+      "question": "argumentative",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 98,
+      "question": "systematic",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 99,
+      "question": "cooperative",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 100,
+      "question": "light-hearted",
+      "most": "square",
+      "least": "square"
+    }
+  ],
+  "26": [
+    {
+      "id": 101,
+      "question": "jovial",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 102,
+      "question": "precise",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 103,
+      "question": "direct",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 104,
+      "question": "even-tempered",
+      "most": "triangle",
+      "least": "triangle"
+    }
+  ],
+  "27": [
+    {
+      "id": 105,
+      "question": "restless",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 106,
+      "question": "neighborly",
+      "most": "triangle",
+      "least": "triangle"
+    },
+    {
+      "id": 107,
+      "question": "appealing",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 108,
+      "question": "careful",
+      "most": "star",
+      "least": "star"
+    }
+  ],
+  "28": [
+    {
+      "id": 109,
+      "question": "respectful",
+      "most": "star",
+      "least": "star"
+    },
+    {
+      "id": 110,
+      "question": "pioneering",
+      "most": "z",
+      "least": "z"
+    },
+    {
+      "id": 111,
+      "question": "optimistic",
+      "most": "square",
+      "least": "square"
+    },
+    {
+      "id": 112,
+      "question": "helpful",
+      "most": "triangle",
       "least": "triangle"
     }
   ]
