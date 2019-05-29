@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PsychometricTest/precache-manifest.4b9553c39d112ed35b64a068b2cff354.js"
+  "/PsychometricTest/precache-manifest.56320f95a1dfe2bfcca5a88849bbdf54.js"
 );
 
 self.addEventListener('message', (event) => {
