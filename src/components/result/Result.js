@@ -209,7 +209,7 @@ class Result extends Component {
        display: 'flex',
      }}>
       <div style={resultContainerStyle}>
-        MOST Count <br/>
+        <b>Most Count</b> <br/>
         ---------------<br/>
         {`star : ${mostAnswers.star}`}<br/>
         {`triangle : ${mostAnswers.triangle}`}<br/>
@@ -219,7 +219,7 @@ class Result extends Component {
       </div>
 
       <div style={resultContainerStyle}>
-        LEAST Count <br/>
+        <b>Least Count</b> <br/>
         --------------- <br/>
         {`star : ${leastAnswers.star}`}<br/>
         {`triangle : ${leastAnswers.triangle}`}<br/>
@@ -227,8 +227,19 @@ class Result extends Component {
         {`z : ${leastAnswers.z}`}<br/>
         {`n : ${leastAnswers.n}`}<br/>
       </div>
+      
       <div style={resultContainerStyle}>
-        Score <br/>
+        <b>Difference</b> <br/>
+        --------------- <br/>
+        {`star : ${mostAnswers.star - leastAnswers.star}`}<br/>
+        {`triangle : ${mostAnswers.triangle - leastAnswers.triangle}`}<br/>
+        {`square : ${mostAnswers.square - leastAnswers.square}`}<br/>
+        {`z : ${mostAnswers.z - leastAnswers.z}`}<br/>
+        {`n : ${mostAnswers.n - leastAnswers.n}`}<br/>
+      </div>
+      
+      <div style={resultContainerStyle}>
+        <b>Score</b> <br/>
         --------------- <br/>
         {`star : ${score.star}`}<br/>
         {`triangle : ${score.triangle}`}<br/>
