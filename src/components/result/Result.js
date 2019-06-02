@@ -198,6 +198,11 @@ class Result extends Component {
   /* ------------------------------------Render Function------------------------------------ */
 
   render() {
+    const {
+      appStateReducer: {
+        userInfo,
+      }
+    } = this.props;
     const {mostAnswers, leastAnswers} = this.getCount();
     const score = this.getScore();
     const resultContainerStyle = {
@@ -205,46 +210,53 @@ class Result extends Component {
     }
 
     return (
-     <div style={{
-       display: 'flex',
-     }}>
+     <div>
       <div style={resultContainerStyle}>
-        <b>Most Count</b> <br/>
-        ---------------<br/>
-        {`star : ${mostAnswers.star}`}<br/>
-        {`triangle : ${mostAnswers.triangle}`}<br/>
-        {`square : ${mostAnswers.square}`}<br/>
-        {`z : ${mostAnswers.z}`}<br/>
-        {`n : ${mostAnswers.n}`}<br/><br/>
+        <div><b>Name:</b>&nbsp;&nbsp;{userInfo.name}</div>
+        <div><b>Recruiter Name:</b>&nbsp;&nbsp;{userInfo.recruiterName}</div>
       </div>
 
-      <div style={resultContainerStyle}>
-        <b>Least Count</b> <br/>
-        --------------- <br/>
-        {`star : ${leastAnswers.star}`}<br/>
-        {`triangle : ${leastAnswers.triangle}`}<br/>
-        {`square : ${leastAnswers.square}`}<br/>
-        {`z : ${leastAnswers.z}`}<br/>
-        {`n : ${leastAnswers.n}`}<br/>
-      </div>
-      
-      <div style={resultContainerStyle}>
-        <b>Difference</b> <br/>
-        --------------- <br/>
-        {`star : ${mostAnswers.star - leastAnswers.star}`}<br/>
-        {`triangle : ${mostAnswers.triangle - leastAnswers.triangle}`}<br/>
-        {`square : ${mostAnswers.square - leastAnswers.square}`}<br/>
-        {`z : ${mostAnswers.z - leastAnswers.z}`}<br/>
-        {`n : ${mostAnswers.n - leastAnswers.n}`}<br/>
-      </div>
-      
-      <div style={resultContainerStyle}>
-        <b>Score</b> <br/>
-        --------------- <br/>
-        {`star : ${score.star}`}<br/>
-        {`triangle : ${score.triangle}`}<br/>
-        {`square : ${score.square}`}<br/>
-        {`z : ${score.z}`}<br/>
+      <div style={{
+       display: 'flex',
+      }}>
+        <div style={resultContainerStyle}>
+          <b>Most Count</b> <br/>
+          ---------------<br/>
+          {`star : ${mostAnswers.star}`}<br/>
+          {`triangle : ${mostAnswers.triangle}`}<br/>
+          {`square : ${mostAnswers.square}`}<br/>
+          {`z : ${mostAnswers.z}`}<br/>
+          {`n : ${mostAnswers.n}`}<br/><br/>
+        </div>
+
+        <div style={resultContainerStyle}>
+          <b>Least Count</b> <br/>
+          --------------- <br/>
+          {`star : ${leastAnswers.star}`}<br/>
+          {`triangle : ${leastAnswers.triangle}`}<br/>
+          {`square : ${leastAnswers.square}`}<br/>
+          {`z : ${leastAnswers.z}`}<br/>
+          {`n : ${leastAnswers.n}`}<br/>
+        </div>
+        
+        <div style={resultContainerStyle}>
+          <b>Difference</b> <br/>
+          --------------- <br/>
+          {`star : ${mostAnswers.star - leastAnswers.star}`}<br/>
+          {`triangle : ${mostAnswers.triangle - leastAnswers.triangle}`}<br/>
+          {`square : ${mostAnswers.square - leastAnswers.square}`}<br/>
+          {`z : ${mostAnswers.z - leastAnswers.z}`}<br/>
+          {`n : ${mostAnswers.n - leastAnswers.n}`}<br/>
+        </div>
+        
+        <div style={resultContainerStyle}>
+          <b>Score</b> <br/>
+          --------------- <br/>
+          {`star : ${score.star}`}<br/>
+          {`triangle : ${score.triangle}`}<br/>
+          {`square : ${score.square}`}<br/>
+          {`z : ${score.z}`}<br/>
+        </div>
       </div>
      </div>
     );
@@ -253,7 +265,8 @@ class Result extends Component {
 
 function mapStateToProps(state) { 
   return {
-    answersReducer: state.answersReducer
+    answersReducer: state.answersReducer,
+    appStateReducer: state.appStateReducer,
   };
 }
 
