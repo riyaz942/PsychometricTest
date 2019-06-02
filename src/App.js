@@ -16,7 +16,7 @@ class App extends Component {
         <div className={styles.app_container}>
           {appState === appStates.GET_USER_DATA && <UserData />}
           {appState === appStates.GET_TEST_DATA && <Table />}
-          {appState === appState.SHOW_RESULT && <Result />}
+          {appState === appStates.SHOW_RESULT && <Result />}
         </div>
       </div>
     );
