@@ -3,8 +3,24 @@ import Section from "../section/section";
 import styles from "./table.module.scss";
 import questions from "../../questions.json";
 import map from "lodash/map";
+import every from 'lodash/every';
 
-export default class Table extends Component {
+import Button from "@material-ui/core/Button";
+import clsx from "clsx";
+import Snackbar from "@material-ui/core/Snackbar";
+// import ErrorIcon from '@material-ui/icons/Error';
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import isEmpty from "lodash/isEmpty";
+import { makeStyles } from '@material-ui/core/styles';
+import { updateAppState } from "../../actions/appStateActions";
+import { appStates } from "../../constants/appStates";
+
+class Table extends Component {
+  state = {
+    openSnackBar: false
+  };
+
   constructor(props) {
     super(props);
 
@@ -13,8 +29,60 @@ export default class Table extends Component {
     };
   }
 
+  handleClick = () => {
+    const { answersReducer, updateAppState } = this.props;
+    let hasError = false;
+
+    const questionsKeys = Object.keys(questions);
+
+    every(questionsKeys, key => {
+      if (isEmpty(answersReducer.answers[key])) {
+        hasError = true;
+        return this.showError();
+      } else if (isEmpty(answersReducer.answers[key].most)) {
+        hasError = true;
+        return this.showError();
+      } else if (isEmpty(answersReducer.answers[key].least)) {
+        hasError = true;
+        return this.showError();
+      }
+      return true;
+    });
+
+    if (!hasError) {
+      updateAppState(appStates.SHOW_RESULT);
+    }
+  };
+
+  showError = () => {
+    this.setState({
+      openSnackBar: true
+    });
+    return false;
+  };
+
+  handleClose = () => {
+    this.setState({
+      openSnackBar: false
+    });
+  };
+
   render() {
     const { keys } = this.state;
+    const { openSnackBar } = this.state;
+    const { className } = this.props;
+    const classes = makeStyles(theme => ({
+      error: {
+        backgroundColor: theme.palette.error.dark
+      },
+      icon: {
+        fontSize: 20
+      },
+      iconVariant: {
+        opacity: 0.9,
+        marginRight: theme.spacing(1)
+      }
+    }));
 
     return (
       <Fragment>
@@ -39,7 +107,57 @@ export default class Table extends Component {
             return <Section sectionId={key} sectionData={questions[key]} />;
           })}
         </div>
+        <Button
+          style={{
+            marginBottom: 100
+          }}
+          onClick={this.handleClick}
+          variant="contained"
+          color="secondary"
+        >
+          Submit
+        </Button>
+        <Snackbar
+          className={clsx(classes.error, className)}
+          aria-describedby="client-snackbar"
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center"
+          }}
+          open={openSnackBar}
+          onClose={this.handleClose}
+          autoHideDuration={2000}
+          ContentProps={{
+            "aria-describedby": "message-id"
+          }}
+          message={
+            <span id="client-snackbar" className={classes.message}>
+              {/* <ErrorIcon className={clsx(classes.icon, classes.iconVariant)} /> */}
+              Please fill all the details
+            </span>
+          }
+        />
       </Fragment>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    answersReducer: state.answersReducer
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+    ...bindActionCreators(
+      {
+        updateAppState
+      },
+      dispatch
+    )
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Table);
