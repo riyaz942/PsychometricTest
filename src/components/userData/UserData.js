@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import { TextInput } from "react-materialize";
 import TextField from '@material-ui/core/TextField';
+import isEmpty from 'lodash/isEmpty';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { updateAppState, updateUserInfo } from "../../actions/appStateActions";
@@ -27,11 +28,20 @@ class UserData extends Component {
   }
 
   onSubmit = event => {
-    const { updateUserInfo, updateAppState } = this.props;
     event.preventDefault();
 
-    updateUserInfo(this.state);
-    updateAppState(appStates.GET_TEST_DATA);
+    const { updateUserInfo, updateAppState } = this.props;
+    const {
+      recruiterName,
+      name
+    } = this.state;
+
+    if(isEmpty(recruiterName) || isEmpty(name))  {
+      alert('Please fill all the details');
+    } else {
+      updateUserInfo(this.state);
+      updateAppState(appStates.GET_TEST_DATA);  
+    }    
   };
 
   render() {
